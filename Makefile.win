@@ -1,0 +1,40 @@
+# Project: project
+# Makefile created by Dev-C++ 5.5.3
+
+CPP      = g++.exe -D__DEBUG__
+CC       = gcc.exe -D__DEBUG__
+WINDRES  = windres.exe
+OBJ      = main.o stack.o html.o net1.o stackweb.o
+LINKOBJ  = main.o stack.o html.o net1.o stackweb.o
+LIBS     = -L"D:/Dev-Cpp/MinGW32/lib" -L"D:/Dev-Cpp/MinGW32/mingw32/lib" -static-libstdc++ -static-libgcc -lwsock32 -mwindows -pg -g3
+INCS     = -I"D:/Dev-Cpp/MinGW32/include"
+CXXINCS  = -I"D:/Dev-Cpp/MinGW32/include" -I"D:/Dev-Cpp/MinGW32/lib/gcc/mingw32/4.7.2/include/c++"
+BIN      = project.exe
+CXXFLAGS = $(CXXINCS) -pg -g3
+CFLAGS   = $(INCS) -pg -g3
+RM       = rm -f
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before $(BIN) all-after
+
+clean: clean-custom
+	${RM} $(OBJ) $(BIN)
+
+$(BIN): $(OBJ)
+	$(CC) $(LINKOBJ) -o $(BIN) $(LIBS)
+
+main.o: main.c
+	$(CC) -c main.c -o main.o $(CFLAGS)
+
+stack.o: stack.c
+	$(CC) -c stack.c -o stack.o $(CFLAGS)
+
+html.o: html.c
+	$(CC) -c html.c -o html.o $(CFLAGS)
+
+net1.o: net1.c
+	$(CC) -c net1.c -o net1.o $(CFLAGS)
+
+stackweb.o: stackweb.c
+	$(CC) -c stackweb.c -o stackweb.o $(CFLAGS)

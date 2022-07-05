@@ -1,0 +1,32 @@
+HTTP/1.1 400 Bad Request
+Server: Tengine
+Date: Tue, 07 Jun 2022 12:39:53 GMT
+Content-Type: text/html
+Content-Length: 574
+Connection: close
+
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<html>
+<head><title>400 Bad Request</title></head>
+<body>
+<center><h1>400 Bad Request</h1></center>
+ Sorry for the inconvenience.<br/>
+Please report this message and include the following information to us.<br/>
+Thank you very much!</p>
+<table>
+<tr>
+<td>URL:</td>
+<td>http://default.bilibili.com/</td>
+</tr>
+<tr>
+<td>Server:</td>
+<td>cn-zjhz-cmcc-w-v6-01</td>
+</tr>
+<tr>
+<td>Date:</td>
+<td>2022/06/07 20:39:53</td>
+</tr>
+</table>
+<hr/>Powered by Tengine<hr><center>tengine</center>
+</body>
+</html>
